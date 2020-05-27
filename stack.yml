@@ -1,0 +1,22 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  
+  nodeapp:
+    image: imagename: dedac44763e0
+    restart: always
+    ports:
+      - 49160:8080
